@@ -1,0 +1,15 @@
+<MapObjConfig>
+	<servers>
+		<id>1</id>
+		<serverInfo>
+			<serverIp>192.169.0.2</serverIp>
+			<serverPort>2109</serverPort>
+		</serverInfo>
+		<id>3</id>
+		<serverInfo>
+			<serverIp>192.210.1.5</serverIp>
+			<serverPort>2108</serverPort>
+		</serverInfo>
+		
+	</servers>
+</MapObjConfig>

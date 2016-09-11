@@ -1,0 +1,9 @@
+<ListConfig>
+	<levels>
+		<!-- serveral levels -->
+		<level>3</level>
+		<level>5</level>
+		<level>9</level>
+	</levels>
+
+</ListConfig>

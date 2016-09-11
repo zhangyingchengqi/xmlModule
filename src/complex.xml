@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<complexConfig>
+<!--
+	<ServerIp>172.16.0.4</ServerIp>
+	
+	
+	<users>
+		<name>zhangsan</name>
+		<name>Jack</name>
+	</users>
+	
+	<servers>
+		<serverInfo>
+			<serverIp>192.169.0.2</serverIp>
+			<serverPort>2109</serverPort>
+		</serverInfo>
+		<serverInfo>
+			<serverIp>192.210.1.5</serverIp>
+			<serverPort>2108</serverPort>
+		</serverInfo>
+	</servers>
+	
+	<codes>
+		<code>20</code>
+		<area>shanghai</area>
+		<code>10</code>
+		<area>beijing</area>
+	</codes>
+	
+	<port>3326</port>
+-->
+
+	<components>
+		<index>1</index>
+		<WebComponent>
+			<id>1</id>
+			<name>table</name>
+			<servers>
+				<name>gsmserver</name>
+				<serverInfo>
+					<serverIp>192.169.0.2</serverIp>
+					<serverPort>2109</serverPort>
+				</serverInfo>
+				<name>cdma</name>
+				<serverInfo>
+					<serverIp>192.210.1.5</serverIp>
+					<serverPort>2108</serverPort>
+				</serverInfo>
+			</servers>
+		</WebComponent>
+		
+		<index>2</index>
+		<WebComponent>
+			<id>3</id>
+			<name>List</name>
+		</WebComponent>
+	</components>
+	
+</complexConfig>

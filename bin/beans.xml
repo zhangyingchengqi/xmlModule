@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  - Application context definition for JPetStore's business layer.
+  - Contains bean references to the transaction manager and to the DAOs in
+  - dataAccessContext-local/jta.xml (see web.xml's "contextConfigLocation").
+  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+<!--			
+	<bean id="dbUtil" class="net.jcad.component.db.DBUtilImp" init-method="connect" destroy-method="disconnect">
+		<constructor-arg index="0"><null/></constructor-arg>
+		<constructor-arg index="1"><value>jdbc:mysql://localhost/testdb</value></constructor-arg>
+		<constructor-arg index="2"><value>softadmin</value></constructor-arg>
+		<constructor-arg index="3"><value>sharkkkk</value></constructor-arg>
+		<constructor-arg index="4"><value>2</value></constructor-arg>
+		<constructor-arg index="5"><value>3000</value></constructor-arg>
+	</bean>
+
+	
+	<bean id="userDao" class="net.mysoft.sss.dao.UserDao" autowire="byType" />
+	<bean id="serviceListDao" class="net.mysoft.sss.dao.ServiceListDao" autowire="byType" init-method="init" />
+	<bean id="dataServiceDao" class="net.mysoft.sss.dao.DataServiceDao" autowire="byType" />
+-->
+	<bean id="conf" class="ticd.java.component.conf.XmlConverterImpl" init-method="xml2J">
+		<property name="xml"><value>test/ch4/conf/simple.xml</value></property>
+		<property name="targetClass"><value>ticd.java.component.conf.SimpleConfig</value></property>
+	</bean>
+	<bean id="assembler" class="ticd.java.component.conf.Assembler">
+		<property name="xmlConverter"><ref bean="conf" /></property>
+	</bean>
+	
+	<bean id="initBean" class="ticd.java.component.util.InitBean" init-method="connect">
+		<property name="name"><value>xiaohua</value></property>
+	</bean>
+	
+</beans>
